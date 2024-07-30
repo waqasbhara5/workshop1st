@@ -11,6 +11,9 @@ public interface SuperHeroAPIService {
 
     String API_URL = "/powerstats";
     String API_URL2 = "/work";
+    String API_URL_Image = "/image";
+    @GET("{id}"+API_URL_Image)
+    Call<Image> fetchImage(@Path("id")String id);
 
     @GET("{id}"+API_URL)
     Call<Powerstat> fetchPowerStats(@Path("id") String id);

@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -15,6 +16,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 
 public class MainActivity extends AppCompatActivity {
+    ImageView ivImage;
     TextView tvname,tvintelligence,tvstrenght,tvSpeed,tvdurability,
             tvpower,tvcombat,tvgroup_affiliation,tvrelatives,tvOccupation,tvBase,tvFullName,
             tvAlterEgos,tvAliases,tvPlaceOfBirth,tvFirstAppearance,tvPublisher,tvAlignment,
@@ -52,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
         tvEyeColor = findViewById(R.id.tvEyeColor);
         tvHairColor = findViewById(R.id.tvHairColor);
 
+        ivImage = findViewById(R.id.ivImage);
+
 
         btn_Fatch_Data = findViewById(R.id.btn_Fatch_Data);
         etid = findViewById(R.id.etid);
@@ -63,7 +67,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String id = etid.getText().toString();
+                Call<Image> callFetchImage = superHeroAPIService.fetchImage(id);
+                    callFetchImage.enqueue(new Callback<Image>() {
+                        @Override
+                        public void onResponse(Call<Image> call, Response<Image> response) {
+                            if (response.isSuccessful()){
+                                Image image = response.body();
 
+
+                            }
+                        }
+
+                        @Override
+                        public void onFailure(Call<Image> call, Throwable t) {
+
+                        }
+                    });
                 ///----------------------------
                 Call<Powerstat> callFetchPowerstat = superHeroAPIService.fetchPowerStats(id);
 
@@ -156,6 +175,10 @@ public class MainActivity extends AppCompatActivity {
                                 Appearance appearance = response.body();
                                 tvGender.setText("Gender : " +appearance.getGender());
                                 tvRace.setText("Race : "+appearance.getRace());
+                                tvHeight.setText("Height : "+appearance.getHeight());
+                                tvWeight.setText("Weight :"+appearance.getWeight());
+                                tvEyeColor.setText("Eye Color : " +appearance.getApikey5());
+                                tvHairColor.setText("Hair Color : " +appearance.getApikey6());
                             }
                             }
 

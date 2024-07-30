@@ -38,9 +38,27 @@
 
 
         <LinearLayout
+            android:paddingBottom="100dp"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvImage"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="20dp"
+                android:text="Image"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:id="@+id/ivImage"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="200dp"
+                android:layout_height="200dp"/>
+
 
             <TextView
                 android:id="@+id/tvPowerstat"
@@ -49,7 +67,6 @@
                 android:text="Powerstat"
                 android:textColor="@color/blue"
                 android:textStyle="bold"
-
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
