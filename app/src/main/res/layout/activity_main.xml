@@ -8,6 +8,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Superhero API"
+        android:textColor="@color/lightsix"
         android:layout_gravity="center"
         android:textStyle="bold"
         android:textSize="24dp"
@@ -29,6 +30,8 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="20dp"
         android:text="Fetch Data"
+        android:textStyle="bold"
+        android:backgroundTint="@color/material_dynamic_primary90"
         android:layout_height="wrap_content"
         />
     <ScrollView
