@@ -10,6 +10,8 @@ import android.widget.TextView;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bumptech.glide.Glide;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -73,7 +75,9 @@ public class MainActivity extends AppCompatActivity {
                         public void onResponse(Call<Image> call, Response<Image> response) {
                             if (response.isSuccessful()){
                                 Image image = response.body();
-
+                                Glide.with(MainActivity.this)
+                                        .load(image.getUrl())
+                                        .into(ivImage);
 
                             }
                         }
