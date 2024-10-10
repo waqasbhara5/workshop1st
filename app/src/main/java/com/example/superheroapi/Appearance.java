@@ -10,17 +10,17 @@ public class Appearance {
 /* ObjectMapper om = new ObjectMapper();
 Root root = om.readValue(myJsonString, Root.class); */
 
-        public String response;
-        public String id;
-        public String name;
-        public String gender;
-        public String race;
-        public ArrayList<String> height;
-        public ArrayList<String> weight;
+        private String response;
+        private String id;
+        private String name;
+        private String gender;
+        private String race;
+        private ArrayList<String> height;
+        private ArrayList<String> weight;
         @SerializedName("eye-color")
-        public String apikey5;
+        private String apikey5;
         @SerializedName("hair-color")
-        public String apikey6;
+        private String apikey6;
 
         public String getResponse() {
                 return response;

@@ -2,8 +2,8 @@ package com.example.superheroapi;
 
 public class Powerstat {
 
-        private String response;
-        private String id;
+    private String response;
+    private String id;
         private String name;
         private String intelligence;
         private String strength;

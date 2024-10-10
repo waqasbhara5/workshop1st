@@ -3,24 +3,23 @@ package com.example.superheroapi;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class Biography {
 
-    public String response;
-    public String id;
-    public String name;
+    private String response;
+    private String id;
+    private String name;
     @SerializedName("full-name")
-    public String apikey;
+    private String fullName;
     @SerializedName("alter-egos")
-    public String apikey2;
-    public ArrayList<String> aliases;
+    private String alterEgos;
+    private ArrayList<String> aliases;
     @SerializedName("place-of-birth")
-    public String apikey3;
+    private String placeOfBirth;
     @SerializedName("first-appearance")
-    public String apikey4;
-    public String publisher;
-    public String alignment;
+    private String firstAppearance;
+    private String publisher;
+    private String alignment;
 
 
     public String getResponse() {
@@ -47,20 +46,20 @@ public class Biography {
         this.name = name;
     }
 
-    public String getApikey() {
-        return apikey;
+    public String getFullName() {
+        return fullName;
     }
 
-    public void setApikey(String apikey) {
-        this.apikey = apikey;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
-    public String getApikey2() {
-        return apikey2;
+    public String getAlterEgos() {
+        return alterEgos;
     }
 
-    public void setApikey2(String apikey2) {
-        this.apikey2 = apikey2;
+    public void setAlterEgos(String alterEgos) {
+        this.alterEgos = alterEgos;
     }
 
     public ArrayList<String> getAliases() {
@@ -71,20 +70,20 @@ public class Biography {
         this.aliases = aliases;
     }
 
-    public String getApikey3() {
-        return apikey3;
+    public String getPlaceOfBirth() {
+        return placeOfBirth;
     }
 
-    public void setApikey3(String apikey3) {
-        this.apikey3 = apikey3;
+    public void setPlaceOfBirth(String placeOfBirth) {
+        this.placeOfBirth = placeOfBirth;
     }
 
-    public String getApikey4() {
-        return apikey4;
+    public String getFirstAppearance() {
+        return firstAppearance;
     }
 
-    public void setApikey4(String apikey4) {
-        this.apikey4 = apikey4;
+    public void setFirstAppearance(String firstAppearance) {
+        this.firstAppearance = firstAppearance;
     }
 
     public String getPublisher() {

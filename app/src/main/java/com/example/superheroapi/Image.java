@@ -1,10 +1,10 @@
 package com.example.superheroapi;
 
 public class Image {
-    public String response;
-    public String id;
-    public String name;
-    public String url;
+    private String response;
+    private String id;
+    private String name;
+    private String url;
 
     public String getResponse() {
         return response;

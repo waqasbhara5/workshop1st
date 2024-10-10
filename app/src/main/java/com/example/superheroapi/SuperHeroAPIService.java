@@ -12,6 +12,8 @@ public interface SuperHeroAPIService {
     String API_URL = "/powerstats";
     String API_URL2 = "/work";
     String API_URL_Image = "/image";
+    String API_URL_NAME = "search";
+
     @GET("{id}"+API_URL_Image)
     Call<Image> fetchImage(@Path("id")String id);
 
@@ -26,6 +28,11 @@ public interface SuperHeroAPIService {
     Call<Work> fetchWork(@Path("id") String id);
     @GET("{id}"+API_URL_Appearance)
     Call<Appearance> fetchAppearance(@Path("id")String id);
+
+    @GET(API_URL_NAME+"/{name}")
+    Call<Root> fetchByName(@Path("name")String name);
+
+
 }
 
 

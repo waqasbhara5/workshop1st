@@ -7,7 +7,7 @@ public class Connections {
 // import com.fasterxml.jackson.annotation.JsonProperty; // version 2.11.1
 /* ObjectMapper om = new ObjectMapper();
 Root root = om.readValue(myJsonString, Root.class); */
-        private String response;
+    private String response;
         private String id;
         private String name;
         @SerializedName("group-affiliation")

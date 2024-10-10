@@ -2,11 +2,11 @@ package com.example.superheroapi;
 
 public class Work {
 
-        public String response;
-        public String id;
-        public String name;
-        public String occupation;
-        public String base;
+    private String response;
+    private String id;
+    private String name;
+    private String occupation;
+    private String base;
 
     public String getResponse() {
         return response;
